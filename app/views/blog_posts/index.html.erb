@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Current Blog Posts</h1>
+<h1>Welcome <%= current_user.email %></h1>
 
   <div class="row">
     <% @blog_posts.each do |blog_post| %>
@@ -10,7 +10,7 @@
           </div>
 
           <div class="panel-body">
-            by <%= blog_post.author %><br />
+            by <%= blog_post.user.email %><br />
             <p>Created at: <%= blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %></p>
             <p><%= blog_post.blog_entry %> </p>
           </div>
