@@ -16,6 +16,13 @@ class BlogPostsController < ApplicationController
     @blog_post = BlogPost.new
   end
 
+  def your_posts
+  end
+
+  def user_profile
+    @user = User.find(params[:id])
+  end
+
   def create
     @blog_post = BlogPost.new(blog_post_params)
 

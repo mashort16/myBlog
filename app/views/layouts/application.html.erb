@@ -13,16 +13,7 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="pull-right">
-        <% if user_signed_in? %>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
-        <% else %>
-          <%= link_to "Log In", new_user_session_path, class: "btn btn-info" %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
-        <% end %>
-      </div>
-    </div>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
 
     <!-- Latest compiled and minified JavaScript -->
